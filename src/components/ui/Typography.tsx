@@ -25,10 +25,10 @@ type HeadingProps = {
 };
 
 const headingSizes = {
-  hero: "text-hero tracking-[-0.02em]",
-  h2: "text-h2 tracking-[-0.01em]",
-  h3: "text-h3",
-  h4: "text-base sm:text-lg",
+  hero: "type-hero tracking-[-0.02em]",
+  h2: "type-h2 tracking-[-0.01em]",
+  h3: "type-h3",
+  h4: "type-h4",
 } as const;
 
 const weights = {
@@ -86,9 +86,9 @@ type TextProps = {
 };
 
 const textSizes = {
-  small: "text-small",
-  body: "text-body",
-  lead: "text-[1.125rem] leading-[1.55]",
+  small: "type-small",
+  body: "type-body",
+  lead: "type-lead",
 } as const;
 
 export function Text({

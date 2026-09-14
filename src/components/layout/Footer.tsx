@@ -46,7 +46,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-small underline underline-offset-4 hover:opacity-70"
+                    className="font-body type-small underline underline-offset-4 hover:opacity-70"
                   >
                     {link.label}
                   </a>
@@ -67,7 +67,7 @@ export function Footer() {
                 setSent(true);
               }}
             >
-              <label className="block font-body text-small" htmlFor="footer-email">
+              <label className="block font-body type-small" htmlFor="footer-email">
                 {footer.follow.emailLabel}
               </label>
               <input
@@ -76,9 +76,9 @@ export function Footer() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-11 w-full rounded-[4px] border-2 border-foreground bg-brand-yellow px-3 font-body text-small outline-none focus:ring-2 focus:ring-foreground/30"
+                className="h-11 w-full rounded-[4px] border-2 border-foreground bg-brand-yellow px-3 font-body type-small outline-none focus:ring-2 focus:ring-foreground/30"
               />
-              <label className="flex items-start gap-3 font-body text-small">
+              <label className="flex items-start gap-3 font-body type-small">
                 <input
                   type="checkbox"
                   required
@@ -101,7 +101,7 @@ export function Footer() {
                 <li key={social.label}>
                   <a
                     href={social.href}
-                    className="font-body text-small font-bold underline underline-offset-4 hover:opacity-70"
+                    className="font-body type-small font-bold underline underline-offset-4 hover:opacity-70"
                   >
                     {social.label}
                   </a>

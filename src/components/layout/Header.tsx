@@ -27,7 +27,7 @@ export function Header() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="font-body text-small text-foreground transition-colors hover:text-brand-gold"
+                className="font-body type-small text-foreground transition-colors hover:text-brand-gold"
                 activeProps={{ className: "underline underline-offset-4" }}
                 activeOptions={{ exact: link.to === "/" }}
               >
@@ -36,7 +36,7 @@ export function Header() {
             ))}
             <a
               href={nav.login.href}
-              className="flex items-center gap-2 font-body text-small text-brand-gold"
+              className="flex items-center gap-2 font-body type-small text-brand-gold"
             >
               <CircleUserRound className="h-6 w-6" strokeWidth={1.5} />
               {nav.login.label}
