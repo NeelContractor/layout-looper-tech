@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "WeDu — Communicate. Collaborate. Create." },
+      { title: "We — Communicate. Collaborate. Create." },
       {
         name: "description",
-        content: "WeDu is an all-in-one workflow platform for creative teams.",
+        content: "WeD is an all-in-one workflow platform for creative teams.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
