@@ -161,3 +161,42 @@
 @utility slant-bottom {
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
+
+/* ---------------------------------------------------------------------------
+ * Type scale utilities. Edit the --text-* tokens above to resize the whole
+ * site; these classes are what the Heading / Text components apply.
+ * ------------------------------------------------------------------------- */
+@utility type-hero {
+  font-size: var(--text-hero);
+  line-height: var(--text-hero--line-height);
+}
+
+@utility type-h2 {
+  font-size: var(--text-h2);
+  line-height: var(--text-h2--line-height);
+}
+
+@utility type-h3 {
+  font-size: var(--text-h3);
+  line-height: var(--text-h3--line-height);
+}
+
+@utility type-h4 {
+  font-size: 1.0625rem;
+  line-height: 1.35;
+}
+
+@utility type-body {
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+}
+
+@utility type-small {
+  font-size: var(--text-small);
+  line-height: var(--text-small--line-height);
+}
+
+@utility type-lead {
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
