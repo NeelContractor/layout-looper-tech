@@ -54,7 +54,7 @@ export function Header() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
-            {open ? <Menu className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </Container>
