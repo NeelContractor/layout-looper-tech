@@ -9,7 +9,7 @@
 export const brand = {
   name: "GrahAura",
   tagline: "Communicate. Collaborate. Create.",
-  logo: "/images/logo.png",
+  logo: "/images/Grahaura_Logo_1.png",
   logoHeight: 48, // px — change to resize the header logo
 };
 
@@ -17,7 +17,11 @@ export const nav = {
   links: [
     { label: "Home", to: "/" as const },
     // { label: "Pricing Plans", to: "/pricing-plans" as const },
-    { label: "Product", to: "/product" as const },
+    { label: "Features", to: "/#features" as const },
+    { label: "How It Works", to: "/#how-It-Works" as const },
+    { label: "Custom Solutions", to: "/#custom-solutions" as const },
+    { label: "Pricing", to: "/#pricing" as const },
+    {label: "FAQ", to: "/#faq" as const}
   ],
   login: { label: "Log In", href: "#login" },
   cta: { label: "Get Started", href: "#get-started" },
@@ -35,20 +39,108 @@ export const nav = {
 //     { icon: "copy", label: "Better\nCollaboration" },
 //   ],
 // };
+// export const hero = {
+//   title: "Your Astrology Practice Deserves\n More Than a WhatsApp Number.",
+
+//   subtitle:
+//     "Create your own professional astrology website, showcase your services and let clients book appointments with you — starting at just ₹999.",
+
+//   cta: {
+//     label: "Get Started",
+//     href: "#get-started",
+//   },
+
+//   image: "/images/hero-illustration.svg",
+
+//   imageAlt: "Team building a product together",
+// };
+// export const hero = {
+//   title: "Your Astrology Practice Deserves\n More Than a WhatsApp Number.",
+
+//   subtitle:
+//     "Create your own professional astrology website, showcase your services and let clients book appointments with you — starting at just ₹999.",
+
+//   cta: {
+//     label: "Get Started",
+//     href: "#get-started",
+//   },
+
+//   imageAlt: "Astrology website preview",
+
+//   productPreview: {
+//     brandName: "AstroVeda",
+
+//     navItems: [
+//       "Home",
+//       "About",
+//       "Services",
+//       "Contact",
+//     ],
+
+//     heroTitle: "Guidance for a Brighter Future",
+
+//     heroText:
+//       "Discover personalized astrology guidance and meaningful insights.",
+
+//     heroButton: "Book Consultation",
+
+//     astrologerName: "Your Astrologer",
+
+//     astrologerRole: "Vedic Astrology Consultant",
+
+//     services: [
+//       {
+//         title: "Birth Chart",
+//         description: "Personalized birth chart reading.",
+//       },
+//       {
+//         title: "Career Guidance",
+//         description: "Career and professional guidance.",
+//       },
+//       {
+//         title: "Marriage",
+//         description: "Relationship and marriage guidance.",
+//       },
+//       {
+//         title: "Life Guidance",
+//         description: "Personalized life guidance.",
+//       },
+//     ],
+//   },
+// };
 export const hero = {
   title: "Your Astrology Practice Deserves\n More Than a WhatsApp Number.",
 
   subtitle:
     "Create your own professional astrology website, showcase your services and let clients book appointments with you — starting at just ₹999.",
 
+  subtitleHighlights: [
+    "your own professional astrology website",
+    "at just ₹999",
+  ],
+
   cta: {
     label: "Get Started",
     href: "#get-started",
   },
 
-  image: "/images/hero-illustration.svg",
+  imageAlt: "Astrology website preview",
 
-  imageAlt: "Team building a product together",
+  productPreview: {
+    brandName: "Grahaura",
+    navItems: ["Home", "About", "Services", "Contact"],
+    heroTitle: "Guidance for a Brighter Future",
+    heroText: "Discover personalized astrology guidance and meaningful insights.",
+    heroButton: "Book Consultation",
+    astrologerName: "Your Astrologer",
+    astrologerRole: "Vedic Astrology Consultant",
+    services: [
+      { title: "Birth Chart", description: "Personalized birth chart reading." },
+      { title: "Career Guidance", description: "Career and professional guidance." },
+      { title: "Marriage", description: "Relationship and marriage guidance." },
+      { title: "Life Guidance", description: "Personalized life guidance." },
+    ],
+  },
 };
 // export const about = {
 //   title: "Is Your Astrology Business Still Running Through WhatsApp, Instagram, Phone Calls?",
@@ -76,22 +168,22 @@ export const services = {
     {
       title: "Build Your Professional \nPresence",
       body: "Your profile, experience, expertise and important information — presented professionally for your clients.",
-      image: "/images/service-1.jpg",
+      image: "/images/Service_1.png",
     },
     {
       title: "Present Your Services \nProfessionally",
       body: "List your astrology services, consultation options, pricing and details so clients can understand what you offer at a glance.",
-      image: "/images/service-2.jpg",
+      image: "/images/Service_22.png",
     },
     {
       title: "Bookings Made\nSimpler",
       body: "Make appointment requests simpler by giving clients a dedicated place to connect and book your services.",
-      image: "/images/service-3.jpg",
+      image: "/images/Service_3.png",
     },
     {
       title: "Your Own Website,\n Your Own Identity",
       body: "Start with a professionally designed template and personalize your content, images, colors and other available elements.",
-      image: "/images/service-4.jpg",
+      image: "/images/Service_44.png",
     },
   ],
 };
@@ -144,7 +236,7 @@ export const creatives = {
     },
   ],
 
-  cta: "Explore Demo",
+  cta: "Explore Free Demo",
 };
 
 export const howItWorks = {
@@ -456,7 +548,7 @@ export const finalCta = {
     label: "Create My Website",
     href: "#get-started",
   },
-  image: "/images/cta-illustration.svg",
+  video: "/videos/Footer_Video.mp4",
   imageAlt: "Team building a professional website",
 };
 
@@ -473,9 +565,9 @@ export const footer = {
   quickLinks: {
     title: "Quick links",
     links: [
-      { label: "Terms & Conditions", href: "#terms" },
-      { label: "Privacy Policy", href: "#privacy" },
-      { label: "Refund Policy", href: "#refund" },
+      { label: "Terms & Conditions", href: "terms-and-conditions" },
+      { label: "Privacy Policy", href: "privacy-policy" },
+      { label: "Refund Policy", href: "/refund-policy" },
       { label: "Accessibility Statement", href: "#accessibility" },
     ],
   },

@@ -269,6 +269,7 @@ export function Pricing({
 }: PricingProps) {
   return (
     <Section
+      id = "pricing"
       tone="surface"
       padding="lg"
       className={className}

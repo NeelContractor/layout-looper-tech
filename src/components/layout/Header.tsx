@@ -18,7 +18,7 @@ export function Header() {
             aria-label={brand.name}
           >
             <img
-              src="/images/Astro-Logo.jpeg"
+              src="/images/Grahaura_Logo_1.png"                      // here the actual image imports 
               alt={`${brand.name} — ${brand.tagline}`}
               style={{ height: brand.logoHeight }}
               className="w-auto max-w-full object-contain"
@@ -27,7 +27,7 @@ export function Header() {
   className="text-2xl font-bold"
   style={{ fontFamily: "var(--font-display)" }}
 >
-  GrahAura
+  {/* Grahaura */}
 </span>
           </Link>
 

@@ -185,7 +185,7 @@ export function Creatives({
                 onClick={() => setDemoOpen(true)}
                 className="mt-10 inline-flex items-center justify-center rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition-transform hover:scale-[1.02]"
               >
-                {cta || "Explore Demo"}
+                {cta || "Explore Free Demo"}
                 <span className="ml-2">
                   →
                 </span>

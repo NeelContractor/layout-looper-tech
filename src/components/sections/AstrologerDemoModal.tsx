@@ -159,7 +159,7 @@ export function AstrologerDemoModal({
                 {/* REAL PROFILE IMAGE */}
                 <div className="h-[82px] w-[82px] shrink-0 overflow-hidden rounded-full border-4 border-white bg-brand-green-soft shadow-md">
                   <img
-                    src="/images/demo/astrologer-profile.jpg"
+                    src="/images/astrology_02.png"
                     alt="Priya Sharma, Vedic Astrologer"
                     className="h-full w-full object-cover"
                   />
@@ -167,7 +167,7 @@ export function AstrologerDemoModal({
 
                 <div className="min-w-0">
                   <h3 className="text-[19px] font-bold">
-                    Priya Sharma
+                    Acharya Dev
                   </h3>
 
                   <p className="mt-1 text-[12px] text-black/55">

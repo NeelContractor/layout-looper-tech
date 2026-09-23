@@ -6,6 +6,7 @@ import { howItWorks } from "@/content/site";
 export function HowItWorks() {
   return (
     <Section
+    id= "how-It-Works"
   tone="white"
   padding="lg"
   className="!py-4"

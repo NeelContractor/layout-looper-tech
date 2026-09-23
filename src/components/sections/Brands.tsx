@@ -87,6 +87,7 @@ export function Brands({
 
   return (
     <Section
+    id = "custom-solutions"
       tone="pink"
       padding="xl"
       slant="top"

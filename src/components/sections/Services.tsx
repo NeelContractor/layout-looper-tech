@@ -52,7 +52,7 @@ export function Services({
   }[columns];
 
   return (
-    <Section tone="white" padding="lg" className={className}>
+    <Section   id="features" tone="white" padding="lg" className={className}>
       <Container>
         <Heading size="h2">{title}</Heading>
         <Text size="small" className="mt-6 max-w-sm">

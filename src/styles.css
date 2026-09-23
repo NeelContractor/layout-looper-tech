@@ -30,6 +30,8 @@
   --color-brand-lavender: var(--brand-lavender);
   --color-brand-gold: var(--brand-gold);
   --color-brand-ink: var(--brand-ink);
+    --color-brand-maroon: var(--brand-maroon); /* NEW */
+
 
   /* ---- Semantic tokens ---- */
   --color-background: var(--background);
@@ -92,6 +94,8 @@
   --brand-lavender: oklch(0.8853 0.0552 279.5); /* #CFD5F7 */
   --brand-gold: oklch(0.5321 0.1156 84.2); /* #996E00 */
   --brand-ink: oklch(0 0 0); /* #000000 */
+    --brand-maroon: oklch(0.365 0.155 25.9); /* #800000 — text color for highlighted phrases */
+
 
   /* Semantic */
   --radius: 0.5rem;
