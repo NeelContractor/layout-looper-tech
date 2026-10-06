@@ -18,7 +18,7 @@ export function Header() {
             aria-label={brand.name}
           >
             <img
-              src="/images/Grahaura_Logo_1.png"                      // here the actual image imports 
+              src="/images/Grahaura_LOGO.png"                      // here the actual image imports 
               alt={`${brand.name} — ${brand.tagline}`}
               style={{ height: brand.logoHeight }}
               className="w-auto max-w-full object-contain"
@@ -48,13 +48,13 @@ export function Header() {
               </Link>
             ))}
 
-            <a
+            {/* <a
               href={nav.login.href}
               className="flex items-center gap-2 font-body type-small text-brand-gold"
             >
               <CircleUserRound className="h-6 w-6" strokeWidth={1.5} />
               {nav.login.label}
-            </a>
+            </a> */}
 
             <ButtonLink
               href={nav.cta.href}

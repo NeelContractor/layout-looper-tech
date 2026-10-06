@@ -55,7 +55,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Newsletter
           <div className="min-w-0">
             <Text weight="bold" size="lead" className="mb-6">
               {footer.follow.title}
@@ -69,8 +69,8 @@ export function Footer() {
             >
               <label className="block font-body type-small" htmlFor="footer-email">
                 {footer.follow.emailLabel}
-              </label>
-              <input
+              </label> */}
+              {/* <input
                 id="footer-email"
                 type="email"
                 required
@@ -92,7 +92,7 @@ export function Footer() {
                 {sent ? "Thanks!" : footer.follow.submitLabel}
               </Button>
             </form>
-          </div>
+          </div> */}
 
           {/* Socials */}
           <div className="min-w-0 lg:pt-14">

@@ -9,7 +9,7 @@
 export const brand = {
   name: "GrahAura",
   tagline: "Communicate. Collaborate. Create.",
-  logo: "/images/Grahaura_Logo_1.png",
+  logo: "/images/Grahaura_LOGO.png",
   logoHeight: 48, // px — change to resize the header logo
 };
 
@@ -486,35 +486,72 @@ export const pricing = {
         href: "#get-started",
       },
     },
+{
+  badge: "Custom",
+  name: "Custom Website + Software",
+  currency: "₹",
+  price: "500",
+  period: "+ GST -- Consultation Fee",
 
-    {
-      badge: "Custom",
-      name: "Custom Website + Software",
-      currency: "₹",
-      price: "15,000+",
-      period: "Starting price -- One time",
+  description:
+    "A personalized digital solution designed around your astrology business and specific requirements.",
 
-      description:
-        "A completely personalized digital platform designed around your astrology business.",
+  highlights: [
+  "One-on-one requirement consultation with our team",
+  "Project proposal & pricing based on your requirements",
+  "Consultation fee is completely non-refundable",
+],
 
-      validity: "Built specifically for your requirements",
+  features: [
+    "Discuss your business requirements",
+    "Understand your goals & workflow",
+    "Custom website & software consultation",
+    "Personalized feature discussion",
+    "UI / UX & branding requirements",
+    "Booking & appointment systems",
+    "Dashboard & client management",
+    "Customized solution planning",
+  ],
 
-      features: [
-        "Completely personalized website",
-        "Custom branding",
-        "Custom UI / UX",
-        "Custom features",
-        "Custom workflows",
-        "Booking & appointment systems",
-        "Dashboard & client management",
-        "Custom astrology software",
-      ],
+  validity: [
+  "One-on-one requirement consultation with our team.",
+  "Project proposal & pricing based on your requirements",
+  "Consultation fee is completely non-refundable",
+  ],
 
-      cta: {
-        label: "Explore Custom Demo",
-        href: "#custom-demo",
-      },
-    },
+  cta: {
+    label: "Book Consultation",
+    href: "#custom-consultation",
+  },
+}
+    // {
+    //   badge: "Custom",
+    //   name: "Custom Website + Software",
+    //   currency: "₹",
+    //   price: "15,000+",
+    //   period: "Starting price -- One time",
+
+    //   description:
+    //     "A completely personalized digital platform designed around your astrology business.",
+
+    //   validity: "Built specifically for your requirements",
+
+    //   features: [
+    //     "Completely personalized website",
+    //     "Custom branding",
+    //     "Custom UI / UX",
+    //     "Custom features",
+    //     "Custom workflows",
+    //     "Booking & appointment systems",
+    //     "Dashboard & client management",
+    //     "Custom astrology software",
+    //   ],
+
+    //   cta: {
+    //     label: "Explore Custom Demo",
+    //     href: "#custom-demo",
+    //   },
+    // },
   ],
 };
 
@@ -555,11 +592,11 @@ export const finalCta = {
 export const footer = {
   contact: {
     title: "Contact",
-    address: "500 Terry Francine Street San\nFrancisco, CA 94158",
+    address: "Ahmedabad,\nGujarat, India",
     items: [
-      { label: "General Inquires:", value: "123-456-7890" },
-      { label: "Sales:", value: "info@mysite.com" },
-      { label: "Customer Care:", value: "info@mysite.com" },
+      { label: "Phone:", value: "+91 91043 84812" },
+      { label: "Email:", value: "contactgrahaura@gmail.com" },
+      // { label: "Customer Care:", value: "info@mysite.com" },
     ],
   },
   quickLinks: {
@@ -567,22 +604,22 @@ export const footer = {
     links: [
       { label: "Terms & Conditions", href: "terms-and-conditions" },
       { label: "Privacy Policy", href: "privacy-policy" },
-      { label: "Refund Policy", href: "/refund-policy" },
-      { label: "Accessibility Statement", href: "#accessibility" },
+      { label: "Refund & Cancellation Policy", href: "/refund-policy" },
+      // { label: "Accessibility Statement", href: "#accessibility" },
     ],
   },
   follow: {
-    title: "Follow",
-    emailLabel: "Email *",
-    checkboxLabel: "Yes, subscribe me to your newsletter. *",
-    submitLabel: "Subscribe",
+    title: "Social Links",
+  //   emailLabel: "Email *",
+  //   checkboxLabel: "Yes, subscribe me to your newsletter. *",
+  //   submitLabel: "Subscribe",
     socials: [
-      { label: "LinkedIn", href: "#linkedin" },
-      { label: "YouTube", href: "#youtube" },
-      { label: "Facebook", href: "#facebook" },
+      { label: "Instagram", href: "#Instagram" },
+      // { label: "YouTube", href: "#youtube" },
+      // { label: "Facebook", href: "#facebook" },
     ],
   },
-  copyright: "\u00A9 2035 by WeDu.",
+  copyright: " Grahaura — Powered by Storely Commerce LLP. ",
 };
 
 // /* Pricing Plans page ----------------------------------------------------- */

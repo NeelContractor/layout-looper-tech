@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
-import { Creatives } from "@/components/sections/Creatives";
+// import { Creatives } from "@/components/sections/Creatives";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Brands } from "@/components/sections/Brands";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -33,7 +33,7 @@ function HomePage() {
       <Hero />
       <About />
       <Services />
-      <Creatives />
+      {/* <Creatives /> */}
       <HowItWorks/>
       <Brands />
       <Pricing />
