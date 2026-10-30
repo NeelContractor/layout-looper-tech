@@ -1,5 +1,5 @@
 const configuredBase = import.meta.env.VITE_API_BASE_URL;
-const configuredFrontend = import.meta.env.VITE_FRONTEND_URL;
+// const configuredFrontend = import.meta.env.VITE_FRONTEND_URL;
 
 export const API_BASE = (
   typeof configuredBase === "string" && configuredBase.trim()
@@ -7,13 +7,18 @@ export const API_BASE = (
     : "http://localhost:3000"
 ).replace(/\/+$/, "");
 
-export const FRONTEND_BASE = (
-  typeof configuredFrontend === "string" && configuredFrontend.trim()
-    ? configuredFrontend
-    : "http://localhost:3001"
-).replace(/\/+$/, "");
+// export const FRONTEND_BASE = (
+//   typeof configuredFrontend === "string" && configuredFrontend.trim()
+//     ? configuredFrontend
+//     : "http://localhost:3001"
+// ).replace(/\/+$/, "");
 
-export const REGISTER_URL = `${FRONTEND_BASE}/register`;
+// export const REGISTER_URL = `${FRONTEND_BASE}/register`;
+export const REGISTER_URL = "/register";
+
+export function registerUrlForPlan(planId: string): string {
+  return `${REGISTER_URL}?planId=${encodeURIComponent(planId)}`;
+}
 
 export interface Plan {
   id: string;

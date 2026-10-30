@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button, ButtonLink } from "@/components/ui/BrandButton";
 import { Heading, Text } from "@/components/ui/Typography";
-import { fetchPlans, formatAmount, REGISTER_URL, type Plan } from "@/lib/plans-api";
+import { fetchPlans, formatAmount, registerUrlForPlan, type Plan } from "@/lib/plans-api";
 
 export function AvailablePlans() {
   const [plans, setPlans] = useState<Plan[] | null>(null);
@@ -144,7 +144,12 @@ function PlanCard({ plan }: { plan: Plan }) {
           </Text>
         ) : null}
 
-        <ButtonLink href={REGISTER_URL} variant="light" fullWidth className="mt-6">
+        <ButtonLink
+          href={registerUrlForPlan(plan.id)}
+          variant="light"
+          fullWidth
+          className="mt-6"
+        >
           {ctaLabel}
         </ButtonLink>
       </div>

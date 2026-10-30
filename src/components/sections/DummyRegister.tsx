@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { useSearch } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { PasswordInput } from "@/components/ui/password-input";
 import {
   Card,
   CardContent,
@@ -14,8 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
-
-const API_BASE = "http://localhost:3000";
+import { API_BASE } from "@/lib/plans-api";
 
 type Role = "client" | "astrologer";
 
@@ -98,13 +96,15 @@ async function api<T>(
     ...(options.headers ?? {}),
   };
   const token = localStorage.getItem("accessToken");
-  if (token) headers.Authorization = `Bearer ${token}`;
+  if (token) headers["Authorization"] = `Bearer ${token}`;
 
-  const res = await fetch(`${API_BASE}${path}`, {
+  const init: RequestInit = {
     method: options.method ?? "GET",
     headers,
-    body: options.body === undefined ? undefined : JSON.stringify(options.body),
-  });
+    ...(options.body === undefined ? {} : { body: JSON.stringify(options.body) }),
+  };
+
+  const res = await fetch(`${API_BASE}${path}`, init);
 
   const data = await res.json().catch(() => null);
   if (!res.ok) {
@@ -146,10 +146,10 @@ function storedUser(): SessionUser | null {
 }
 
 export default function DummyRegisterPage() {
-  const [searchParams] = useSearchParams();
-  const paymentId = searchParams.get("paymentId");
-  const planIdParam = searchParams.get("planId");
-  const returnedStatus = searchParams.get("status");
+  const search = useSearch({ strict: false }) as Record<string, string | undefined>;
+  const paymentId = search["paymentId"] ?? null;
+  const planIdParam = search["planId"] ?? null;
+  const returnedStatus = search["status"] ?? null;
 
   const [sessionUser, setSessionUser] = useState<SessionUser | null>(() => storedUser());
 
@@ -171,6 +171,7 @@ export default function DummyRegisterPage() {
   const [busyPlanId, setBusyPlanId] = useState<string | null>(null);
   const [payment, setPayment] = useState<PaymentOutcome | null>(null);
   const [paymentError, setPaymentError] = useState<string | null>(null);
+  const autoCheckoutStarted = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -254,7 +255,7 @@ export default function DummyRegisterPage() {
         `/payments/${result.payment.id}/initiate`,
         {
           method: "POST",
-          body: { returnTo: `${window.location.origin}/dummy_register` },
+          body: { returnTo: `${window.location.origin}/register` },
         },
       );
 
@@ -278,12 +279,21 @@ export default function DummyRegisterPage() {
     }
   };
 
+  useEffect(() => {
+    if (autoCheckoutStarted.current) return;
+    if (!planIdParam || !sessionUser) return;
+    const plan = plans.find((p) => p.id === planIdParam);
+    if (!plan) return;
+    autoCheckoutStarted.current = true;
+    void checkout(plan);
+  }, [checkout, planIdParam, plans, sessionUser]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const data = await api<DummyRegisterResponse>("/dummy_register", {
+      const data = await api<DummyRegisterResponse>("/register", {
         method: "POST",
         body: {
           name,
@@ -304,7 +314,10 @@ export default function DummyRegisterPage() {
       toast.success("Dummy account created");
 
       const selectedPlan = plans.find((plan) => plan.id === selectedPlanId);
-      if (selectedPlan) await checkout(selectedPlan);
+      if (selectedPlan) {
+        autoCheckoutStarted.current = true;
+        await checkout(selectedPlan);
+      }
     } catch (err) {
       setSubmitError(err);
       toast.error(errorMessage(err));
@@ -332,7 +345,7 @@ export default function DummyRegisterPage() {
               </Button>
             )}*/}
             <Button asChild variant="outline">
-              <Link to="/signin">Sign In</Link>
+              <a href="/signin">Sign In</a>
             </Button>
           </div>
         </div>
@@ -374,7 +387,7 @@ export default function DummyRegisterPage() {
             <CardHeader>
               <CardTitle>Create test account</CardTitle>
               <CardDescription>
-                Uses POST /dummy_register. Every signup field is available here.
+                Uses POST /register. Every signup field is available here.
               </CardDescription>
             </CardHeader>
             <form onSubmit={handleSubmit}>
@@ -458,8 +471,9 @@ export default function DummyRegisterPage() {
 
                 <div className="space-y-2">
                   <Label htmlFor="dummy-password">Password</Label>
-                  <PasswordInput
+                  <Input
                     id="dummy-password"
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Min 8 chars, 1 uppercase, 1 number"

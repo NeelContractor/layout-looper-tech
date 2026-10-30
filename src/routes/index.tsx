@@ -6,7 +6,7 @@ import { Services } from "@/components/sections/Services";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Brands } from "@/components/sections/Brands";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Pricing } from "@/components/sections/Pricing";
+// import { Pricing } from "@/components/sections/Pricing";
 import { AvailablePlans } from "@/components/sections/AvailablePlans";
 import { FinalCta } from "@/components/sections/FinalCta";
 
@@ -37,7 +37,7 @@ function HomePage() {
       {/* <Creatives /> */}
       <HowItWorks />
       <Brands />
-      <Pricing />
+      {/*<Pricing />*/}
       <AvailablePlans />
       <Testimonials />
 
