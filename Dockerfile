@@ -1,20 +1,27 @@
-
-# Stage 1: Build
-FROM node:22-alpine AS build
+# Stage 1: Build on the native build platform
+FROM --platform=$BUILDPLATFORM oven/bun:1 AS builder
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
 COPY . .
-RUN npm run build
 
-# Stage 2: Serve static files
-FROM nginx:stable-alpine
+# Run Vite using Node.js
+RUN node ./node_modules/vite/bin/vite.js build
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# Stage 2: Production server
+FROM node:22-alpine AS runner
 
-EXPOSE 80
+WORKDIR /app
 
-CMD ["nginx", "-g", "daemon off;"]
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=8080
+
+COPY --from=builder /app/.output ./.output
+
+EXPOSE 8080
+
+CMD ["node", ".output/server/index.mjs"]
