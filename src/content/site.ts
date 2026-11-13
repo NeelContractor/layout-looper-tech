@@ -23,7 +23,7 @@ export const nav = {
     { label: "Pricing", to: "/#pricing" as const },
     {label: "FAQ", to: "/#faq" as const}
   ],
-  login: { label: "Log In", href: "#login" },
+  // login: { label: "Log In", href: "#login" },
   cta: { label: "Get Started", href: "#get-started" },
 };
 
@@ -132,7 +132,7 @@ export const hero = {
     heroTitle: "Guidance for a Brighter Future",
     heroText: "Discover personalized astrology guidance and meaningful insights.",
     heroButton: "Book Consultation",
-    astrologerName: "Your Astrologer",
+    astrologerName: " Anand Astrologer",
     astrologerRole: "Vedic Astrology Consultant",
     services: [
       { title: "Birth Chart", description: "Personalized birth chart reading." },
@@ -614,7 +614,7 @@ export const footer = {
   //   checkboxLabel: "Yes, subscribe me to your newsletter. *",
   //   submitLabel: "Subscribe",
     socials: [
-      { label: "Instagram", href: "#Instagram" },
+      { label: "Instagram", href: "https://www.instagram.com/grahaura.official?cplk=MWxvMHphMWVmZmNvOQ==" },
       // { label: "YouTube", href: "#youtube" },
       // { label: "Facebook", href: "#facebook" },
     ],

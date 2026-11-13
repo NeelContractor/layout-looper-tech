@@ -167,7 +167,7 @@ export function AstrologerDemoModal({
 
                 <div className="min-w-0">
                   <h3 className="text-[19px] font-bold">
-                    Acharya Dev
+                    Acharya Anand
                   </h3>
 
                   <p className="mt-1 text-[12px] text-black/55">

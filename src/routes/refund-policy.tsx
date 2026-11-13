@@ -41,14 +41,14 @@ const sections: Block[] = [
   {
     title: "2. Mini Website Plan",
     paragraphs: [
-      "Our Mini Website Plan will be reviewed by our team after your registration. Once the required details have been verified, your personalised URL, selected template, and booking features will be set up and made available to you shortly.",
+      "Our Mini Website Plan will be reviewed by our team after your registration. Once the required details have been verified, your personalised URL, selected template, and booking features will be set up and made available to you within 1-2 days.",
       "Because of this:",
     ],
     bullets: [
       "Fees paid for the Mini Website Plan are non-refundable once the website has been created or activated.",
       "Fees are not refunded for unused time after a voluntary cancellation or if you stop using the website.",
       "If your registration cannot be approved by us (for example, the details cannot be verified or the content is not allowed under our Terms & Conditions), and the website has not been activated, the amount you paid will be returned as described in section 9.",
-      "If you have paid but your website has not been activated because of a payment or technical failure, please contact us and we will either activate it or return the amount, as described in section 9.",
+      "If you have paid but your website has not been activated because of a payment or technical failure, please contact us and we will activate within 5 days, as described in section 9.",
     ],
   },
   {
@@ -98,7 +98,7 @@ const sections: Block[] = [
       "You do not provide the information, content, or approvals needed to continue a project for a long period after we have reminded you.",
     ],
     after:
-      "In these cases, no refund is given for amounts already paid. If we cancel a plan for a reason that is entirely on our side and you have not received the service at all, we will return the amount paid for the part of the service that was not provided.",
+      "In all these cases, no refund is given for amounts already paid. This also applies if we end or cancel a plan, website, or project for any other reason."
   },
   {
     title: "7. Hosting, Downtime and Technical Issues",
@@ -127,7 +127,8 @@ const sections: Block[] = [
   {
     title: "9. Duplicate or Failed Payments",
     paragraphs: [
-      "If a payment is charged twice by mistake, or the amount is deducted but the service was not activated because of a payment failure, we will correct it. The extra or unused amount will be returned to the original payment method, usually within 7 to 10 working days, subject to the payment gateway and your bank. We may ask for transaction details to verify the payment.",
+      "If you face any issue with a payment made to us, such as a payment charged twice, an amount deducted but the service not activated, a failed or pending transaction, or any other payment-related problem, please contact us with your transaction details. We will review the issue and fix it within 7 to 10 working days from the date we verify it.",
+      "Depending on the issue, the fix may include activating your service, correcting the payment record, or resolving the transaction with the payment gateway. This section does not create a right to a refund, and any money movement depends on the payment gateway and your bank."
     ],
   },
   {
