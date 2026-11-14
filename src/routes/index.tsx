@@ -10,9 +10,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { AvailablePlans } from "@/components/sections/AvailablePlans";
 import { FinalCta } from "@/components/sections/FinalCta";
 
-const title = "Weu — Communicate. Collaborate. Create.";
+const title = "Grahaura";
 const description =
-  "WeDu is an all-in-one workflow platform that helps creative teams plan projects, share files and collaborate faster.";
+  "your own professional astrology website.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
