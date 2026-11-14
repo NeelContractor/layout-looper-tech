@@ -7,9 +7,9 @@
  */
 
 export const brand = {
-  name: "GrahAura",
-  tagline: "Communicate. Collaborate. Create.",
-  logo: "/images/Grahaura_LOGO.png",
+  name: "Grahaura",
+  tagline: "Astrology digital platform",
+  logo: "/images/Grahaura_LOGO_BG.png",
   logoHeight: 48, // px — change to resize the header logo
 };
 

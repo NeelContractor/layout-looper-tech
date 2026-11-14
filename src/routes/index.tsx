@@ -7,12 +7,12 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Brands } from "@/components/sections/Brands";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
-import { AvailablePlans } from "@/components/sections/AvailablePlans";
+// import { AvailablePlans } from "@/components/sections/AvailablePlans";
 import { FinalCta } from "@/components/sections/FinalCta";
 
-const title = "Weu — Communicate. Collaborate. Create.";
+const title = "Grahaura";
 const description =
-  "WeDu is an all-in-one workflow platform that helps creative teams plan projects, share files and collaborate faster.";
+  "Astrology Digital Platform";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,7 +38,7 @@ function HomePage() {
       <HowItWorks />
       <Brands />
       <Pricing />
-      <AvailablePlans />
+      {/* <AvailablePlans /> */}
       <Testimonials />
 
       <FinalCta />

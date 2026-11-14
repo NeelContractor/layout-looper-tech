@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "We — Communicate. Collaborate. Create." },
+      { title: "Grahaura" },
       {
         name: "description",
-        content: "WeD is an all-in-one workflow platform for creative teams.",
+        content: "Astrology digital platform",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
