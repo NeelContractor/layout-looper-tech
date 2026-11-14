@@ -14,8 +14,7 @@ const DEMO_BUTTON = {
   label: "Explore Free Demo", // button text
   arrow: "→", // set to "" to remove the arrow
   // Tailwind classes for the button look (colour, size, shape, hover)
-  className:
-    "bg-black text-white px-7 py-3 text-sm font-medium rounded-full hover:scale-[1.02]",
+  className: "bg-black text-white px-7 py-3 text-sm font-medium rounded-full hover:scale-[1.02]",
 };
 
 type ServiceCardProps = {
@@ -37,11 +36,7 @@ export function ServiceCard({
   return (
     <article className={cn("min-w-0", className)}>
       <div className="overflow-hidden rounded-card" style={{ aspectRatio: ratio }}>
-        <img
-          src={image}
-          alt={title.replace(/\n/g, " ")}
-          className="h-full w-full object-cover"
-        />
+        <img src={image} alt={title.replace(/\n/g, " ")} className="h-full w-full object-cover" />
       </div>
       <Heading size="h3" weight="bold" className="mt-6">
         {title}

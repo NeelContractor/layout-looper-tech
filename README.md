@@ -28,3 +28,11 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+---
+
+command to run on server
+
+```
+docker run -d --name grahaura-main-site   -p 8080:8080   -e VITE_API_BASE_URL=https://api.storely.co.in   --restart unless-stopped   neelcontractor3/grahaura-main-site:latest
+```

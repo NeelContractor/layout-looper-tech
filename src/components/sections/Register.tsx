@@ -36,20 +36,14 @@ export function Register({
           {/* RIGHT SIDE */}
           <div className="max-w-xl">
             {/* Intro / Attention Text */}
-            <Text
-              size="small"
-              className="mb-7 max-w-xl text-[1.08rem] leading-relaxed font-medium"
-            >
+            <Text size="small" className="mb-7 max-w-xl text-[1.08rem] leading-relaxed font-medium">
               {intro}
             </Text>
 
             {/* Pain Points */}
             <div className="space-y-3">
               {points.map((point, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3"
-                >
+                <div key={index} className="flex items-start gap-3">
                   <span
                     className="mt-[2px] flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#8B2F2F] text-sm font-bold text-white"
                     aria-hidden="true"
@@ -57,10 +51,7 @@ export function Register({
                     ×
                   </span>
 
-                  <Text
-                    size="small"
-                    className="leading-relaxed"
-                  >
+                  <Text size="small" className="leading-relaxed">
                     {point}
                   </Text>
                 </div>
@@ -70,10 +61,7 @@ export function Register({
             {/* There's a simpler way */}
             <div className="mt-8">
               <div className="inline-block">
-                <Text
-                  size="small"
-                  className="relative inline-block text-[1.15rem] font-semibold"
-                >
+                <Text size="small" className="relative inline-block text-[1.15rem] font-semibold">
                   {finalLine}
 
                   <span

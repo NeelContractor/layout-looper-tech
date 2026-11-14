@@ -1,12 +1,3 @@
-// import { createFileRoute } from '@tanstack/react-router'
-
-// export const Route = createFileRoute('/terms-and-conditions')({
-//   component: RouteComponent,
-// })
-
-// function RouteComponent() {
-//   return <div>Hello "/terms-and-conditions"!</div>
-// }
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -260,12 +251,12 @@ const sections: Block[] = [
     ],
   },
   {
-  title: "24. Governing Law and Jurisdiction",
-  paragraphs: [
-    "These Terms & Conditions, and any dispute arising out of or in connection with our services, are governed by the laws of India.",
-    "We encourage you to contact us first so that we can try to resolve any concern amicably. If a dispute cannot be resolved this way, it will be subject to the exclusive jurisdiction of the courts located in Ahmedabad, Gujarat, India only. By using our services, you agree that no other court will have jurisdiction over any claim, dispute, or legal proceeding relating to us or our services.",
-  ],
-},
+    title: "24. Governing Law and Jurisdiction",
+    paragraphs: [
+      "These Terms & Conditions, and any dispute arising out of or in connection with our services, are governed by the laws of India.",
+      "We encourage you to contact us first so that we can try to resolve any concern amicably. If a dispute cannot be resolved this way, it will be subject to the exclusive jurisdiction of the courts located in Ahmedabad, Gujarat, India only. By using our services, you agree that no other court will have jurisdiction over any claim, dispute, or legal proceeding relating to us or our services.",
+    ],
+  },
   {
     title: "25. General",
     bullets: [
@@ -278,22 +269,14 @@ const sections: Block[] = [
   },
   {
     title: "26. Contact Us",
-    paragraphs: [
-      "If you have questions about these Terms & Conditions, please contact us:",
-    ],
-    bullets: [
-      `Email: ${BUSINESS.email}`,
-      `Phone: ${BUSINESS.phone}`,
-    ],
+    paragraphs: ["If you have questions about these Terms & Conditions, please contact us:"],
+    bullets: [`Email: ${BUSINESS.email}`, `Phone: ${BUSINESS.phone}`],
   },
 ];
 
 export const Route = createFileRoute("/terms-and-conditions")({
   head: () => ({
-    meta: [
-      { title: `${title} — ${BUSINESS.name}` },
-      { name: "description", content: description },
-    ],
+    meta: [{ title: `${title} — ${BUSINESS.name}` }, { name: "description", content: description }],
   }),
   component: TermsAndConditionsPage,
 });
@@ -310,9 +293,8 @@ function TermsAndConditionsPage() {
           </Text>
 
           <Text size="small" className="mt-6">
-            Please read these terms carefully before using our website or
-            purchasing our services. By using {BUSINESS.name}, you agree to
-            be bound by them.
+            Please read these terms carefully before using our website or purchasing our services.
+            By using {BUSINESS.name}, you agree to be bound by them.
           </Text>
 
           <div className="mt-14 space-y-10">

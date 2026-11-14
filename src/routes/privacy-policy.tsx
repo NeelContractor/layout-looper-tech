@@ -139,19 +139,18 @@ const sections: Block[] = [
     after: `To use these rights, email us at ${BUSINESS.email}. For End User data on an astrologer's website, your request may need to go to the astrologer, and we will help pass it on where we can. We may need to verify your identity first.`,
   },
   {
-  title: "13. Children's Privacy and Bookings for Children",
-  paragraphs: [
-    "Our services are meant for adults and businesses, and our platform is not directed at children. A person under 18 should not create an account or make a booking on their own.",
-    "A parent or legal guardian may book a consultation for their child, and may share the child's details, such as name, date, time, and place of birth, for that purpose. By doing so, the parent or guardian confirms that they are the child's parent or legal guardian and that they consent to the child's information being collected and used for the booking.",
-  ],
-  bullets: [
-    "We use a child's information only to provide the booked service, and not for advertising, tracking, or profiling the child.",
-    "The booking must be made using the parent's or guardian's own contact and payment details.",
-    "Astrologers must not take bookings directly from minors without a parent's or guardian's consent, and must keep a child's information confidential.",
-  ],
-  after:
-    `If you believe a child has given us information without a parent's or guardian's consent, or if you want to correct or delete a child's information, please contact us at ${BUSINESS.email} and we will take appropriate steps.`,
-},
+    title: "13. Children's Privacy and Bookings for Children",
+    paragraphs: [
+      "Our services are meant for adults and businesses, and our platform is not directed at children. A person under 18 should not create an account or make a booking on their own.",
+      "A parent or legal guardian may book a consultation for their child, and may share the child's details, such as name, date, time, and place of birth, for that purpose. By doing so, the parent or guardian confirms that they are the child's parent or legal guardian and that they consent to the child's information being collected and used for the booking.",
+    ],
+    bullets: [
+      "We use a child's information only to provide the booked service, and not for advertising, tracking, or profiling the child.",
+      "The booking must be made using the parent's or guardian's own contact and payment details.",
+      "Astrologers must not take bookings directly from minors without a parent's or guardian's consent, and must keep a child's information confidential.",
+    ],
+    after: `If you believe a child has given us information without a parent's or guardian's consent, or if you want to correct or delete a child's information, please contact us at ${BUSINESS.email} and we will take appropriate steps.`,
+  },
   {
     title: "14. Responsibilities of Astrologers",
     bullets: [
@@ -185,10 +184,7 @@ const sections: Block[] = [
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
-    meta: [
-      { title: `${title} — ${BUSINESS.name}` },
-      { name: "description", content: description },
-    ],
+    meta: [{ title: `${title} — ${BUSINESS.name}` }, { name: "description", content: description }],
   }),
   component: PrivacyPolicyPage,
 });
@@ -205,9 +201,8 @@ function PrivacyPolicyPage() {
           </Text>
 
           <Text size="small" className="mt-6">
-            Your privacy is important to us. This policy explains how we
-            collect, use, and protect information when you use our website and
-            services.
+            Your privacy is important to us. This policy explains how we collect, use, and protect
+            information when you use our website and services.
           </Text>
 
           <div className="mt-14 space-y-10">

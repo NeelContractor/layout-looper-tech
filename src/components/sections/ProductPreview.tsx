@@ -94,7 +94,7 @@
 //         {/* Laptop Screen */}
 //         <div className="rounded-t-[10px] border-[3px] border-brand-ink bg-brand-ink shadow-2xl sm:rounded-t-[18px] sm:border-[7px]">
 //           <div className="overflow-hidden rounded-t-[7px] bg-white sm:rounded-t-[10px]">
-            
+
 //             {/* Browser Bar */}
 //             <div className="flex h-8 items-center gap-1.5 border-b border-black/10 bg-gray-100 px-3">
 //               <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
@@ -132,7 +132,7 @@
 
 //             {/* Website Hero */}
 //             <div className="grid grid-cols-2 gap-3 px-5 pb-3 pt-3 sm:pb-5 sm:pt-4">
-              
+
 //               {/* Hero Content */}
 //               <div className="flex flex-col justify-center">
 //                 <span className="mb-2 text-[8px] font-medium uppercase tracking-wider text-brand-yellow">
@@ -155,7 +155,7 @@
 //               {/* Astrologer Visual */}
 //               <div className="flex items-center justify-center">
 //                 <div className="flex h-[110px] w-[100px] flex-col items-center justify-center rounded-xl bg-brand-yellow/20 sm:h-[175px] sm:w-[150px]">
-                  
+
 //                   <img
 //                     src={profileImage}
 //                     alt={profileImageAlt}
@@ -229,13 +229,13 @@
 //     lg:w-[165px]
 //   "
 // >
-        
+
 //         {/* Phone Outer Frame */}
 //         <div className="relative rounded-[20px] border-[3px] border-brand-ink bg-brand-ink p-[2px] shadow-2xl sm:rounded-[28px] sm:border-[6px]">
-          
+
 //           {/* Phone Screen */}
 //           <div className="relative aspect-[9/19.5] overflow-hidden rounded-[16px] bg-white sm:rounded-[22px]">
-            
+
 //             {/* Dynamic Island */}
 //             <div className="relative h-7 bg-white">
 //               <div className="absolute left-1/2 top-1.5 flex h-3 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-brand-ink sm:h-4 sm:w-16">
@@ -275,7 +275,7 @@
 
 //             {/* Mobile Profile */}
 //             <div className="mx-3 rounded-lg bg-brand-yellow/20 p-3 text-center">
-              
+
 //               <img
 //                 src={profileImage}
 //                 alt={profileImageAlt}
@@ -384,8 +384,7 @@ export function ProductPreview({
      HERO CONTENT
   ========================== */
   heroTitle = "Guidance for a Brighter Future",
-  heroText =
-    "Discover personalized astrology guidance and meaningful insights.",
+  heroText = "Discover personalized astrology guidance and meaningful insights.",
   heroButton = "Book Consultation",
 
   /* =========================
@@ -421,7 +420,7 @@ export function ProductPreview({
         // so the phone never has to overlap the laptop in a cramped way.
         // sm/lg: back to the original side-by-side, overlapping layout.
         "relative flex w-full flex-col items-center justify-center gap-8 overflow-x-hidden sm:flex-row sm:items-end sm:justify-center sm:gap-4 sm:overflow-visible",
-        className
+        className,
       )}
     >
       {/* =====================================================
@@ -432,7 +431,6 @@ export function ProductPreview({
         {/* Laptop Screen */}
         <div className="rounded-t-[10px] border-[3px] border-brand-ink bg-brand-ink shadow-2xl sm:rounded-t-[18px] sm:border-[7px]">
           <div className="overflow-hidden rounded-t-[7px] bg-white sm:rounded-t-[10px]">
-            
             {/* Browser Bar */}
             <div className="flex h-8 items-center gap-1.5 border-b border-black/10 bg-gray-100 px-3">
               <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
@@ -440,24 +438,17 @@ export function ProductPreview({
               <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
 
               <div className="ml-3 flex h-5 flex-1 items-center rounded bg-white px-3">
-                <span className="text-[7px] text-gray-400">
-                  www.yourastrologywebsite.com
-                </span>
+                <span className="text-[7px] text-gray-400">www.yourastrologywebsite.com</span>
               </div>
             </div>
 
             {/* Website Header */}
             <div className="flex items-center justify-between px-5 py-3">
-              <div className="text-sm font-bold text-brand-ink">
-                {brandName}
-              </div>
+              <div className="text-sm font-bold text-brand-ink">{brandName}</div>
 
               <div className="hidden items-center gap-4 sm:flex">
                 {navItems.map((item) => (
-                  <span
-                    key={item}
-                    className="text-[8px] text-gray-600"
-                  >
+                  <span key={item} className="text-[8px] text-gray-600">
                     {item}
                   </span>
                 ))}
@@ -470,7 +461,6 @@ export function ProductPreview({
 
             {/* Website Hero */}
             <div className="grid grid-cols-2 gap-3 px-5 pb-3 pt-3 sm:pb-5 sm:pt-4">
-              
               {/* Hero Content */}
               <div className="flex flex-col justify-center">
                 <span className="mb-2 text-[8px] font-medium uppercase tracking-wider text-brand-yellow">
@@ -493,7 +483,6 @@ export function ProductPreview({
               {/* Astrologer Visual */}
               <div className="flex items-center justify-center">
                 <div className="flex h-[110px] w-[100px] flex-col items-center justify-center rounded-xl bg-brand-yellow/20 sm:h-[175px] sm:w-[150px]">
-                  
                   <img
                     src={profileImage}
                     alt={profileImageAlt}
@@ -513,16 +502,11 @@ export function ProductPreview({
 
             {/* Services */}
             <div className="border-t border-black/10 px-5 py-3 sm:py-4">
-              <div className="mb-3 text-[10px] font-semibold text-brand-ink">
-                Our Services
-              </div>
+              <div className="mb-3 text-[10px] font-semibold text-brand-ink">Our Services</div>
 
               <div className="grid grid-cols-3 gap-2">
                 {services.slice(0, 3).map((service) => (
-                  <div
-                    key={service.title}
-                    className="rounded-lg border border-black/10 p-2"
-                  >
+                  <div key={service.title} className="rounded-lg border border-black/10 p-2">
                     <div className="mb-1 text-[9px] font-semibold text-brand-ink">
                       {service.title}
                     </div>
@@ -534,7 +518,6 @@ export function ProductPreview({
                 ))}
               </div>
             </div>
-
           </div>
         </div>
 
@@ -570,13 +553,10 @@ export function ProductPreview({
     lg:w-[165px]
   "
       >
-        
         {/* Phone Outer Frame */}
         <div className="relative rounded-[20px] border-[3px] border-brand-ink bg-brand-ink p-[2px] shadow-2xl sm:rounded-[28px] sm:border-[6px]">
-          
           {/* Phone Screen */}
           <div className="relative aspect-[9/19.5] overflow-hidden rounded-[16px] bg-white sm:rounded-[22px]">
-            
             {/* Dynamic Island */}
             <div className="relative h-7 bg-white">
               <div className="absolute left-1/2 top-1.5 flex h-3 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-brand-ink sm:h-4 sm:w-16">
@@ -586,13 +566,9 @@ export function ProductPreview({
 
             {/* Mobile Header */}
             <div className="flex items-center justify-between border-b border-black/10 px-3 py-2">
-              <span className="text-[8px] font-bold text-brand-ink">
-                {brandName}
-              </span>
+              <span className="text-[8px] font-bold text-brand-ink">{brandName}</span>
 
-              <span className="text-[11px] text-brand-ink">
-                ☰
-              </span>
+              <span className="text-[11px] text-brand-ink">☰</span>
             </div>
 
             {/* Mobile Hero */}
@@ -605,9 +581,7 @@ export function ProductPreview({
                 {heroTitle}
               </div>
 
-              <p className="mt-2 text-[6px] leading-relaxed text-gray-500">
-                {heroText}
-              </p>
+              <p className="mt-2 text-[6px] leading-relaxed text-gray-500">{heroText}</p>
 
               <button className="mt-3 w-full rounded bg-brand-ink py-2 text-[6px] text-white">
                 {heroButton}
@@ -616,41 +590,27 @@ export function ProductPreview({
 
             {/* Mobile Profile */}
             <div className="mx-3 rounded-lg bg-brand-yellow/20 p-3 text-center">
-              
               <img
                 src={profileImage}
                 alt={profileImageAlt}
                 className="mx-auto h-10 w-10 rounded-full border-2 border-brand-yellow object-cover"
               />
 
-              <div className="mt-2 text-[7px] font-semibold text-brand-ink">
-                {astrologerName}
-              </div>
+              <div className="mt-2 text-[7px] font-semibold text-brand-ink">{astrologerName}</div>
 
-              <div className="mt-1 text-[5px] text-gray-500">
-                {astrologerRole}
-              </div>
+              <div className="mt-1 text-[5px] text-gray-500">{astrologerRole}</div>
             </div>
 
             {/* Mobile Services */}
             <div className="px-3 py-3">
-              <div className="mb-2 text-[7px] font-semibold text-brand-ink">
-                Services
-              </div>
+              <div className="mb-2 text-[7px] font-semibold text-brand-ink">Services</div>
 
               <div className="space-y-1.5">
                 {services.map((service) => (
-                  <div
-                    key={service.title}
-                    className="rounded border border-black/10 px-2 py-2"
-                  >
-                    <div className="text-[6px] font-semibold text-brand-ink">
-                      {service.title}
-                    </div>
+                  <div key={service.title} className="rounded border border-black/10 px-2 py-2">
+                    <div className="text-[6px] font-semibold text-brand-ink">{service.title}</div>
 
-                    <div className="mt-0.5 text-[5px] text-gray-500">
-                      {service.description}
-                    </div>
+                    <div className="mt-0.5 text-[5px] text-gray-500">{service.description}</div>
                   </div>
                 ))}
               </div>
@@ -658,19 +618,12 @@ export function ProductPreview({
 
             {/* Mobile Bottom Navigation */}
             <div className="mt-1 flex justify-around border-t border-black/10 px-2 py-2">
-              <span className="text-[5px] text-gray-500">
-                Home
-              </span>
+              <span className="text-[5px] text-gray-500">Home</span>
 
-              <span className="text-[5px] text-gray-500">
-                Services
-              </span>
+              <span className="text-[5px] text-gray-500">Services</span>
 
-              <span className="text-[5px] text-gray-500">
-                Book
-              </span>
+              <span className="text-[5px] text-gray-500">Book</span>
             </div>
-
           </div>
         </div>
       </div>

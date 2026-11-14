@@ -4,7 +4,7 @@ const configuredBase = import.meta.env.VITE_API_BASE_URL;
 export const API_BASE = (
   typeof configuredBase === "string" && configuredBase.trim()
     ? configuredBase
-    : "http://localhost:3000"
+    : "https://api.storely.co.in"
 ).replace(/\/+$/, "");
 
 // export const FRONTEND_BASE = (

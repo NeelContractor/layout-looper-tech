@@ -38,10 +38,7 @@ export function TestimonialCard({
           }}
         >
           {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              className="h-2 w-2 rounded-full bg-brand-ink"
-            />
+            <span key={i} className="h-2 w-2 rounded-full bg-brand-ink" />
           ))}
         </div>
 
@@ -61,11 +58,7 @@ export function TestimonialCard({
 
                   {/* Question + icon */}
                   <div className="flex min-w-0 flex-1 items-start justify-between gap-3">
-                    <Text
-                      size="small"
-                      weight="bold"
-                      className="leading-snug"
-                    >
+                    <Text size="small" weight="bold" className="leading-snug">
                       {item.question}
                     </Text>
 

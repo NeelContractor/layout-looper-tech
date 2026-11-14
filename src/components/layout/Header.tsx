@@ -12,23 +12,16 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-transparent bg-background/95 backdrop-blur">
       <Container>
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4">
-          <Link
-            to="/"
-            className="flex min-w-0 items-center"
-            aria-label={brand.name}
-          >
+          <Link to="/" className="flex min-w-0 items-center" aria-label={brand.name}>
             <img
-              src="/images/Grahaura_LOGO.png"                      // here the actual image imports 
+              src="/images/Grahaura_LOGO.png" // here the actual image imports
               alt={`${brand.name} — ${brand.tagline}`}
               style={{ height: brand.logoHeight }}
               className="w-auto max-w-full object-contain"
             />
-             <span
-  className="text-2xl font-bold"
-  style={{ fontFamily: "var(--font-display)" }}
->
-  {/* Grahaura */}
-</span>
+            <span className="text-2xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
+              {/* Grahaura */}
+            </span>
           </Link>
 
           {/* Desktop navigation */}
@@ -39,8 +32,7 @@ export function Header() {
                 to={link.to}
                 className="font-body type-small text-foreground transition-colors hover:text-brand-gold"
                 activeProps={{
-                  className:
-                    "font-body type-small text-foreground underline underline-offset-4",
+                  className: "font-body type-small text-foreground underline underline-offset-4",
                 }}
                 activeOptions={{ exact: link.to === "/" }}
               >
@@ -56,12 +48,7 @@ export function Header() {
               {nav.login.label}
             </a> */}
 
-            <ButtonLink
-              href={nav.cta.href}
-              variant="yellow"
-              size="sm"
-              radius="sm"
-            >
+            <ButtonLink href={nav.cta.href} variant="yellow" size="sm" radius="sm">
               {nav.cta.label}
             </ButtonLink>
           </nav>
@@ -74,11 +61,7 @@ export function Header() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
-            {open ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </Container>
@@ -116,13 +99,7 @@ export function Header() {
                 {nav.login.label}
               </a>
 
-              <ButtonLink
-                href={nav.cta.href}
-                variant="yellow"
-                size="md"
-                radius="sm"
-                fullWidth
-              >
+              <ButtonLink href={nav.cta.href} variant="yellow" size="md" radius="sm" fullWidth>
                 {nav.cta.label}
               </ButtonLink>
             </div>

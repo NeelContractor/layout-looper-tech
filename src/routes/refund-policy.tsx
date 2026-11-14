@@ -7,7 +7,7 @@
 // function RouteComponent() {
 //   return <div>Hello "/refund-policy"!</div>
 // }
-// 
+//
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -163,19 +163,14 @@ const sections: Block[] = [
   },
   {
     title: "14. Contact Us",
-    paragraphs: [
-      "For questions about payments, cancellations, or this policy, please contact us:",
-    ],
+    paragraphs: ["For questions about payments, cancellations, or this policy, please contact us:"],
     bullets: [`Email: ${BUSINESS.email}`, `Phone: ${BUSINESS.phone}`],
   },
 ];
 
 export const Route = createFileRoute("/refund-policy")({
   head: () => ({
-    meta: [
-      { title: `${title} — ${BUSINESS.name}` },
-      { name: "description", content: description },
-    ],
+    meta: [{ title: `${title} — ${BUSINESS.name}` }, { name: "description", content: description }],
   }),
   component: RefundPolicyPage,
 });
@@ -192,8 +187,7 @@ function RefundPolicyPage() {
           </Text>
 
           <Text size="small" className="mt-6">
-            Please review this policy before purchasing our website or custom
-            software services.
+            Please review this policy before purchasing our website or custom software services.
           </Text>
 
           <div className="mt-14 space-y-10">

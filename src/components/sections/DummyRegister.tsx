@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearch } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -171,7 +171,6 @@ export default function DummyRegisterPage() {
   const [busyPlanId, setBusyPlanId] = useState<string | null>(null);
   const [payment, setPayment] = useState<PaymentOutcome | null>(null);
   const [paymentError, setPaymentError] = useState<string | null>(null);
-  const autoCheckoutStarted = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -264,10 +263,9 @@ export default function DummyRegisterPage() {
         return;
       }
 
-      const completed = await api<PaymentOutcome>(
-        `/payments/${result.payment.id}/complete`,
-        { method: "POST" },
-      );
+      const completed = await api<PaymentOutcome>(`/payments/${result.payment.id}/complete`, {
+        method: "POST",
+      });
       setPayment(completed);
       toast.success("Mock payment completed");
     } catch (err) {
@@ -279,21 +277,12 @@ export default function DummyRegisterPage() {
     }
   };
 
-  useEffect(() => {
-    if (autoCheckoutStarted.current) return;
-    if (!planIdParam || !sessionUser) return;
-    const plan = plans.find((p) => p.id === planIdParam);
-    if (!plan) return;
-    autoCheckoutStarted.current = true;
-    void checkout(plan);
-  }, [checkout, planIdParam, plans, sessionUser]);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const data = await api<DummyRegisterResponse>("/register", {
+      const data = await api<DummyRegisterResponse>("/auth/register", {
         method: "POST",
         body: {
           name,
@@ -315,7 +304,6 @@ export default function DummyRegisterPage() {
 
       const selectedPlan = plans.find((plan) => plan.id === selectedPlanId);
       if (selectedPlan) {
-        autoCheckoutStarted.current = true;
         await checkout(selectedPlan);
       }
     } catch (err) {
@@ -326,14 +314,16 @@ export default function DummyRegisterPage() {
     }
   };
 
-  const canCheckout = Boolean(sessionUser) || Boolean(localStorage.getItem("accessToken"));
+  const canCheckout =
+    Boolean(sessionUser) ||
+    (typeof window !== "undefined" && Boolean(localStorage.getItem("accessToken")));
 
   return (
     <div className="min-h-screen bg-muted/40 px-4 py-10">
       <div className="mx-auto max-w-5xl space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h1 className="text-2xl font-bold">Dummy Register</h1>
+            <h1 className="text-2xl font-bold">Register</h1>
             <p className="text-sm text-muted-foreground">
               Dev-only signup and plan checkout harness for redirect and PhonePe testing.
             </p>
@@ -538,8 +528,8 @@ export default function DummyRegisterPage() {
             <CardHeader>
               <CardTitle>Plans</CardTitle>
               <CardDescription>
-                Buy a plan as the current test user. Gateway mode redirects to PhonePe; otherwise the
-                mock payment is completed locally.
+                Buy a plan as the current test user. Gateway mode redirects to PhonePe; otherwise
+                the mock payment is completed locally.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">

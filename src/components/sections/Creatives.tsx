@@ -39,7 +39,6 @@ export function Creatives({
       <Section tone="white" padding="lg" className={className}>
         <Container>
           <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
-
             {/* Illustration */}
             <div className="relative order-2 min-w-0 lg:order-1">
               <span
@@ -59,32 +58,22 @@ export function Creatives({
                 className="absolute bottom-0 left-[18%] w-32 sm:w-44"
               />
 
-              <img
-                src={image}
-                alt={imageAlt}
-                className="relative mx-auto h-auto w-full max-w-lg"
-              />
+              <img src={image} alt={imageAlt} className="relative mx-auto h-auto w-full max-w-lg" />
             </div>
-
 
             {/* Copy */}
             <div className="order-1 min-w-0 lg:order-2">
-              <Heading size="h2">
-                {title}
-              </Heading>
+              <Heading size="h2">{title}</Heading>
 
               <Text size="small" className="mt-6 max-w-xl">
                 {body}
               </Text>
 
-
               {/* Highlights */}
               <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {highlights.map((item) => (
                   <div key={item.label} className="min-w-0">
-
                     <div className="flex items-start gap-3">
-
                       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-sm text-white">
                         ✦
                       </div>
@@ -92,28 +81,20 @@ export function Creatives({
                       <div>
                         <div
                           className={`text-base font-semibold ${
-                            item.highlight
-                              ? "text-brand-maroon"
-                              : ""
+                            item.highlight ? "text-brand-maroon" : ""
                           }`}
                         >
                           {item.label}
                         </div>
 
-                        <Text
-                          size="small"
-                          className="mt-2"
-                        >
+                        <Text size="small" className="mt-2">
                           {item.description}
                         </Text>
                       </div>
-
                     </div>
-
                   </div>
                 ))}
               </div>
-
 
               {/* Explore Demo */}
               <button
@@ -122,23 +103,15 @@ export function Creatives({
                 className="mt-10 inline-flex items-center justify-center rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition-transform hover:scale-[1.02]"
               >
                 {cta || "Explore Free Demo"}
-                <span className="ml-2">
-                  →
-                </span>
+                <span className="ml-2">→</span>
               </button>
-
             </div>
-
           </div>
         </Container>
       </Section>
 
-
       {/* Demo Modal */}
-      <AstrologerDemoModal
-        open={demoOpen}
-        onClose={() => setDemoOpen(false)}
-      />
+      <AstrologerDemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </>
   );
 }

@@ -25,21 +25,13 @@ export function Testimonials({
   }[columns];
 
   return (
-    <Section id= "faq" tone="white" padding="lg" className={className}>
+    <Section id="faq" tone="white" padding="lg" className={className}>
       <Container>
         <Heading size="h2">{title}</Heading>
 
-        <div
-          className={cn(
-            "mt-14 grid gap-10 sm:gap-8",
-            gridCols
-          )}
-        >
+        <div className={cn("mt-14 grid gap-10 sm:gap-8", gridCols)}>
           {items.map((item) => (
-            <TestimonialCard
-              key={item.author}
-              {...item}
-            />
+            <TestimonialCard key={item.author} {...item} />
           ))}
         </div>
       </Container>

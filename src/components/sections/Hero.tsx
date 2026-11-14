@@ -28,7 +28,6 @@ export function Hero({
     <Section tone="white" padding="lg" className={className}>
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
-
           {/* Left Content */}
           <div className="order-2 min-w-0 lg:order-1">
             <Heading size="hero">{title}</Heading>
@@ -37,22 +36,13 @@ export function Hero({
               {highlightText(subtitle, subtitleHighlights)}
             </Text>
 
-            <ButtonLink
-              href={cta.href}
-              variant="solid"
-              size="md"
-              radius="sm"
-              className="mt-8"
-            >
+            <ButtonLink href={cta.href} variant="solid" size="md" radius="sm" className="mt-8">
               {cta.label}
             </ButtonLink>
           </div>
 
           {/* Right Product Preview */}
-          <div
-            className="order-1 min-w-0 lg:order-2"
-            aria-label={imageAlt}
-          >
+          <div className="order-1 min-w-0 lg:order-2" aria-label={imageAlt}>
             <ProductPreview
               brandName={hero.productPreview.brandName}
               navItems={hero.productPreview.navItems}
@@ -64,7 +54,6 @@ export function Hero({
               astrologerRole={hero.productPreview.astrologerRole}
             />
           </div>
-
         </div>
       </Container>
     </Section>

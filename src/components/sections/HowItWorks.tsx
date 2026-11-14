@@ -5,14 +5,8 @@ import { howItWorks } from "@/content/site";
 
 export function HowItWorks() {
   return (
-    <Section
-    id= "how-It-Works"
-  tone="white"
-  padding="lg"
-  className="!py-4"
->
+    <Section id="how-It-Works" tone="white" padding="lg" className="!py-4">
       <Container>
-
         {/* Header */}
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-maroon">
@@ -28,10 +22,8 @@ export function HowItWorks() {
           </Text>
         </div>
 
-
         {/* Steps */}
         <div className="relative mt-14">
-
           {/* Connecting line */}
           <div
             aria-hidden="true"
@@ -49,13 +41,8 @@ export function HowItWorks() {
           />
 
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-
             {howItWorks.steps.map((step) => (
-              <div
-                key={step.number}
-                className="relative min-w-0"
-              >
-
+              <div key={step.number} className="relative min-w-0">
                 {/* Number */}
                 <div
                   className={`
@@ -77,33 +64,21 @@ export function HowItWorks() {
                   {step.number}
                 </div>
 
-
                 {/* Content */}
                 <div className="mt-6">
+                  <h3 className="text-lg font-semibold leading-tight">{step.title}</h3>
 
-                  <h3 className="text-lg font-semibold leading-tight">
-                    {step.title}
-                  </h3>
-
-                  <Text
-                    size="small"
-                    className="mt-3 max-w-xs"
-                  >
+                  <Text size="small" className="mt-3 max-w-xs">
                     {step.description}
                   </Text>
-
                 </div>
-
               </div>
             ))}
-
           </div>
         </div>
 
-
         {/* Reassurance */}
         <div className="mt-14 flex items-center gap-3">
-
           <span
             aria-hidden="true"
             className="
@@ -122,12 +97,8 @@ export function HowItWorks() {
             ✦
           </span>
 
-          <p className="text-sm font-medium">
-            {howItWorks.reassurance}
-          </p>
-
+          <p className="text-sm font-medium">{howItWorks.reassurance}</p>
         </div>
-
       </Container>
     </Section>
   );

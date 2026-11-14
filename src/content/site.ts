@@ -21,7 +21,7 @@ export const nav = {
     { label: "How It Works", to: "/#how-It-Works" as const },
     { label: "Custom Solutions", to: "/#custom-solutions" as const },
     { label: "Pricing", to: "/#pricing" as const },
-    {label: "FAQ", to: "/#faq" as const}
+    { label: "FAQ", to: "/#faq" as const },
   ],
   login: { label: "Log In", href: "#login" },
   cta: { label: "Get Started", href: "#get-started" },
@@ -114,10 +114,7 @@ export const hero = {
   subtitle:
     "Create your own professional astrology website, showcase your services and let clients book appointments with you — starting at just ₹999.",
 
-  subtitleHighlights: [
-    "your own professional astrology website",
-    "at just ₹999",
-  ],
+  subtitleHighlights: ["your own professional astrology website", "at just ₹999"],
 
   cta: {
     label: "Get Started",
@@ -147,8 +144,7 @@ export const hero = {
 //   body: "Your clients shouldn't have to search through old WhatsApp messages to find your services, pricing or appointment availability.\n❌ WhatsApp messages everywhere  ",
 // };
 export const about = {
-  title:
-    "Is Your Astrology Business Still Running Through WhatsApp, Instagram, Phone Calls?",
+  title: "Is Your Astrology Business Still Running Through WhatsApp, Instagram, Phone Calls?",
 
   body: `Your clients shouldn't have to jump between WhatsApp, Instagram and phone calls just to understand your services, get your details or book an appointment..
 Too many WhatsApp conversations
@@ -212,20 +208,17 @@ export const creatives = {
     {
       icon: "grid",
       label: "Your Professional Profile",
-      description:
-        "Introduce yourself, your experience and your expertise.",
+      description: "Introduce yourself, your experience and your expertise.",
     },
     {
       icon: "folder",
       label: "Your Services & Pricing",
-      description:
-        "Clearly show what you offer and what each consultation includes.",
+      description: "Clearly show what you offer and what each consultation includes.",
     },
     {
       icon: "pencil",
       label: "Simple Appointment Booking",
-      description:
-        "Let clients easily find the right service and request a consultation.",
+      description: "Let clients easily find the right service and request a consultation.",
     },
     {
       icon: "link",
@@ -242,8 +235,7 @@ export const creatives = {
 export const howItWorks = {
   title: "From Idea to Live Website in 4 Simple Steps.",
 
-  body:
-    "Getting your astrology practice online doesn't have to be complicated. Choose your plan, share your information, customize your website and you're ready to go.",
+  body: "Getting your astrology practice online doesn't have to be complicated. Choose your plan, share your information, customize your website and you're ready to go.",
 
   steps: [
     {
@@ -265,8 +257,7 @@ export const howItWorks = {
     {
       number: "03",
       title: "Customize",
-      description:
-        "Choose your template and personalize supported colors, content and images.",
+      description: "Choose your template and personalize supported colors, content and images.",
       background: "bg-brand-lavender",
     },
 
@@ -300,8 +291,7 @@ export const howItWorks = {
 export const brands = {
   title: "Need Something More Than a Template?",
 
-  body:
-    "Your astrology business can have its own personalized website and software — designed around the way you work and the experience you want to give your clients.",
+  body: "Your astrology business can have its own personalized website and software — designed around the way you work and the experience you want to give your clients.",
 
   logos: [
     {
@@ -449,12 +439,10 @@ export const testimonials = {
   ],
 };
 
-
 export const pricing = {
   title: "Pricing Plans",
 
-  body:
-    "Choose the option that fits your astrology business — start with a professional website or build a completely personalized digital solution.",
+  body: "Choose the option that fits your astrology business — start with a professional website or build a completely personalized digital solution.",
 
   plans: [
     {
@@ -464,8 +452,7 @@ export const pricing = {
       price: "999",
       period: "Monthly",
 
-      description:
-        "Everything you need to establish your professional online presence.",
+      description: "Everything you need to establish your professional online presence.",
 
       validity: "Perfect for astrologers getting started online",
 
@@ -486,44 +473,44 @@ export const pricing = {
         href: "#get-started",
       },
     },
-{
-  badge: "Custom",
-  name: "Custom Website + Software",
-  currency: "₹",
-  price: "500",
-  period: "+ GST -- Consultation Fee",
+    {
+      badge: "Custom",
+      name: "Custom Website + Software",
+      currency: "₹",
+      price: "500",
+      period: "+ GST -- Consultation Fee",
 
-  description:
-    "A personalized digital solution designed around your astrology business and specific requirements.",
+      description:
+        "A personalized digital solution designed around your astrology business and specific requirements.",
 
-  highlights: [
-  "One-on-one requirement consultation with our team",
-  "Project proposal & pricing based on your requirements",
-  "Consultation fee is completely non-refundable",
-],
+      highlights: [
+        "One-on-one requirement consultation with our team",
+        "Project proposal & pricing based on your requirements",
+        "Consultation fee is completely non-refundable",
+      ],
 
-  features: [
-    "Discuss your business requirements",
-    "Understand your goals & workflow",
-    "Custom website & software consultation",
-    "Personalized feature discussion",
-    "UI / UX & branding requirements",
-    "Booking & appointment systems",
-    "Dashboard & client management",
-    "Customized solution planning",
-  ],
+      features: [
+        "Discuss your business requirements",
+        "Understand your goals & workflow",
+        "Custom website & software consultation",
+        "Personalized feature discussion",
+        "UI / UX & branding requirements",
+        "Booking & appointment systems",
+        "Dashboard & client management",
+        "Customized solution planning",
+      ],
 
-  validity: [
-  "One-on-one requirement consultation with our team.",
-  "Project proposal & pricing based on your requirements",
-  "Consultation fee is completely non-refundable",
-  ],
+      validity: [
+        "One-on-one requirement consultation with our team.",
+        "Project proposal & pricing based on your requirements",
+        "Consultation fee is completely non-refundable",
+      ],
 
-  cta: {
-    label: "Book Consultation",
-    href: "#custom-consultation",
-  },
-}
+      cta: {
+        label: "Book Consultation",
+        href: "#custom-consultation",
+      },
+    },
     // {
     //   badge: "Custom",
     //   name: "Custom Website + Software",
@@ -610,9 +597,9 @@ export const footer = {
   },
   follow: {
     title: "Social Links",
-  //   emailLabel: "Email *",
-  //   checkboxLabel: "Yes, subscribe me to your newsletter. *",
-  //   submitLabel: "Subscribe",
+    //   emailLabel: "Email *",
+    //   checkboxLabel: "Yes, subscribe me to your newsletter. *",
+    //   submitLabel: "Subscribe",
     socials: [
       { label: "Instagram", href: "#Instagram" },
       // { label: "YouTube", href: "#youtube" },

@@ -70,7 +70,7 @@ export function Footer() {
               <label className="block font-body type-small" htmlFor="footer-email">
                 {footer.follow.emailLabel}
               </label> */}
-              {/* <input
+          {/* <input
                 id="footer-email"
                 type="email"
                 required

@@ -8,6 +8,12 @@ RUN bun install --frozen-lockfile
 
 COPY . .
 
+# Public URL of the deployed backend. Vite inlines VITE_* vars at build time,
+# so this must be supplied when building the image, e.g.
+#   docker build --build-arg VITE_API_BASE_URL=https://api.example.com .
+ARG VITE_API_BASE_URL
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 # Run Vite using Node.js
 RUN node ./node_modules/vite/bin/vite.js build
 

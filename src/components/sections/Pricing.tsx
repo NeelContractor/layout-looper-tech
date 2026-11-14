@@ -50,11 +50,7 @@ export function PlanCard({
 
       <div className="rounded-card bg-brand-ink px-7 py-9 text-primary-foreground sm:px-8">
         {/* Plan name */}
-        <Text
-          size="lead"
-          tone="light"
-          className="text-[1.15rem]"
-        >
+        <Text size="lead" tone="light" className="text-[1.15rem]">
           {name}
         </Text>
 
@@ -63,9 +59,7 @@ export function PlanCard({
           {/* Price */}
           <div className="shrink-0">
             <div className="flex items-start gap-1">
-              <span className="font-body text-[1.125rem] leading-tight">
-                {currency}
-              </span>
+              <span className="font-body text-[1.125rem] leading-tight">{currency}</span>
 
               <span
                 className="font-body leading-[0.95]"
@@ -79,47 +73,31 @@ export function PlanCard({
             </div>
 
             {/* Period */}
-            <Text
-              tone="light"
-              className="mt-1 text-[0.75rem]"
-            >
+            <Text tone="light" className="mt-1 text-[0.75rem]">
               {period}
             </Text>
           </div>
 
           {/* Consultation Points */}
-          {name === "Custom Website + Software" &&
-            Array.isArray(validity) && (
-              <div className="min-w-0 flex-1 rounded-md border border-white/10 bg-white/[0.04] px-4 py-3">
-                <div className="space-y-2">
-                  {validity.map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-2"
-                    >
-                      <span className="mt-0.5 shrink-0 text-sm text-brand-yellow">
-                        ✓
-                      </span>
+          {name === "Custom Website + Software" && Array.isArray(validity) && (
+            <div className="min-w-0 flex-1 rounded-md border border-white/10 bg-white/[0.04] px-4 py-3">
+              <div className="space-y-2">
+                {validity.map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-sm text-brand-yellow">✓</span>
 
-                      <Text
-                        tone="light"
-                        size="small"
-                        className="leading-snug"
-                      >
-                        {item}
-                      </Text>
-                    </div>
-                  ))}
-                </div>
+                    <Text tone="light" size="small" className="leading-snug">
+                      {item}
+                    </Text>
+                  </div>
+                ))}
               </div>
-            )}
+            </div>
+          )}
         </div>
 
         {/* Description */}
-        <Text
-          tone="light"
-          className="mt-5"
-        >
+        <Text tone="light" className="mt-5">
           {description}
         </Text>
 
@@ -127,19 +105,10 @@ export function PlanCard({
         {features && features.length > 0 && (
           <div className="mt-7 space-y-3">
             {features.map((feature) => (
-              <div
-                key={feature}
-                className="flex items-start gap-2"
-              >
-                <span className="mt-0.5 shrink-0 text-brand-yellow">
-                  ✓
-                </span>
+              <div key={feature} className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-brand-yellow">✓</span>
 
-                <Text
-                  tone="light"
-                  size="small"
-                  className="leading-snug"
-                >
+                <Text tone="light" size="small" className="leading-snug">
                   {feature}
                 </Text>
               </div>
@@ -154,19 +123,10 @@ export function PlanCard({
               <div className="mt-7 rounded-md border border-white/10 bg-white/[0.04] px-4 py-3">
                 <div className="space-y-2">
                   {validity.map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-2"
-                    >
-                      <span className="mt-0.5 shrink-0 text-sm text-brand-yellow">
-                        ✓
-                      </span>
+                    <div key={item} className="flex items-start gap-2">
+                      <span className="mt-0.5 shrink-0 text-sm text-brand-yellow">✓</span>
 
-                      <Text
-                        tone="light"
-                        size="small"
-                        className="leading-snug"
-                      >
+                      <Text tone="light" size="small" className="leading-snug">
                         {item}
                       </Text>
                     </div>
@@ -174,10 +134,7 @@ export function PlanCard({
                 </div>
               </div>
             ) : (
-              <Text
-                tone="light"
-                className="mt-8"
-              >
+              <Text tone="light" className="mt-8">
                 {validity}
               </Text>
             )}
@@ -205,43 +162,24 @@ type PricingProps = {
   className?: string;
 };
 
-export function Pricing({
-  plans = pricing.plans,
-  className,
-}: PricingProps) {
+export function Pricing({ plans = pricing.plans, className }: PricingProps) {
   return (
-    <Section
-      id="pricing"
-      tone="surface"
-      padding="lg"
-      className={className}
-    >
+    <Section id="pricing" tone="surface" padding="lg" className={className}>
       <Container>
         {/* Centered Heading */}
-        <Heading
-          size="hero"
-          align="center"
-          className="mx-auto"
-        >
+        <Heading size="hero" align="center" className="mx-auto">
           Pricing Plans
         </Heading>
 
         {/* Short intro */}
-        <Text
-          size="lead"
-          align="center"
-          className="mx-auto mt-6 max-w-2xl"
-        >
+        <Text size="lead" align="center" className="mx-auto mt-6 max-w-2xl">
           {pricing.body}
         </Text>
 
         {/* Pricing Cards */}
         <div className="mt-14 grid min-w-0 gap-8 md:grid-cols-2">
           {plans.map((plan) => (
-            <PlanCard
-              key={plan.name}
-              {...plan}
-            />
+            <PlanCard key={plan.name} {...plan} />
           ))}
         </div>
       </Container>

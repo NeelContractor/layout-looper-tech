@@ -144,12 +144,7 @@ function PlanCard({ plan }: { plan: Plan }) {
           </Text>
         ) : null}
 
-        <ButtonLink
-          href={registerUrlForPlan(plan.id)}
-          variant="light"
-          fullWidth
-          className="mt-6"
-        >
+        <ButtonLink href={registerUrlForPlan(plan.id)} variant="light" fullWidth className="mt-6">
           {ctaLabel}
         </ButtonLink>
       </div>

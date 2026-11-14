@@ -7,10 +7,7 @@ type AstrologerDemoModalProps = {
   onClose: () => void;
 };
 
-export function AstrologerDemoModal({
-  open,
-  onClose,
-}: AstrologerDemoModalProps) {
+export function AstrologerDemoModal({ open, onClose }: AstrologerDemoModalProps) {
   /*
    * Lock the main website behind the modal.
    * Only the mobile demo itself will scroll.
@@ -100,13 +97,9 @@ export function AstrologerDemoModal({
           <header className="sticky top-0 z-40 border-b border-black/5 bg-[#fffaf5]/95 px-5 pb-3 pt-10 backdrop-blur-md">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <h1 className="truncate text-[16px] font-bold leading-tight">
-                  ✦ Cosmic Guidance
-                </h1>
+                <h1 className="truncate text-[16px] font-bold leading-tight">✦ Cosmic Guidance</h1>
 
-                <p className="mt-1 text-[10px] text-black/50">
-                  Astrology • Tarot • Numerology
-                </p>
+                <p className="mt-1 text-[10px] text-black/50">Astrology • Tarot • Numerology</p>
               </div>
 
               <button
@@ -139,8 +132,7 @@ export function AstrologerDemoModal({
               </h2>
 
               <p className="mt-4 text-[14px] leading-6 text-black/65">
-                Discover clarity, direction and deeper understanding through
-                astrology.
+                Discover clarity, direction and deeper understanding through astrology.
               </p>
 
               <button
@@ -166,27 +158,19 @@ export function AstrologerDemoModal({
                 </div>
 
                 <div className="min-w-0">
-                  <h3 className="text-[19px] font-bold">
-                    Acharya Dev
-                  </h3>
+                  <h3 className="text-[19px] font-bold">Acharya Dev</h3>
 
-                  <p className="mt-1 text-[12px] text-black/55">
-                    Vedic Astrologer & Tarot Reader
-                  </p>
+                  <p className="mt-1 text-[12px] text-black/55">Vedic Astrologer & Tarot Reader</p>
 
                   <p className="mt-1 text-[12px]">
-                    ⭐ 4.9{" "}
-                    <span className="text-black/55">
-                      (120+ consultations)
-                    </span>
+                    ⭐ 4.9 <span className="text-black/55">(120+ consultations)</span>
                   </p>
                 </div>
               </div>
 
               <p className="mt-6 text-[14px] leading-6 text-black/70">
-                With over 8 years of experience in Vedic astrology and tarot
-                reading, I help people find clarity, balance and direction in
-                their lives.
+                With over 8 years of experience in Vedic astrology and tarot reading, I help people
+                find clarity, balance and direction in their lives.
               </p>
             </section>
 
@@ -206,9 +190,8 @@ export function AstrologerDemoModal({
               <SectionTitle>About Me</SectionTitle>
 
               <p className="mt-3 text-[13px] leading-6 text-black/65">
-                I combine traditional Vedic astrology with practical guidance
-                to help you understand your life patterns, opportunities and
-                challenges.
+                I combine traditional Vedic astrology with practical guidance to help you understand
+                your life patterns, opportunities and challenges.
               </p>
             </section>
 
@@ -287,19 +270,13 @@ export function AstrologerDemoModal({
                     SELECTED SERVICE
                 ---------------------------------------------- */}
                 <div className="mt-5 rounded-[18px] bg-white p-4">
-                  <p className="text-[10px] text-black/40">
-                    Selected Consultation
-                  </p>
+                  <p className="text-[10px] text-black/40">Selected Consultation</p>
 
                   <div className="mt-2 flex items-center justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="text-[13px] font-bold">
-                        Birth Chart Reading
-                      </p>
+                      <p className="text-[13px] font-bold">Birth Chart Reading</p>
 
-                      <p className="mt-1 text-[10px] text-black/45">
-                        45 minute consultation
-                      </p>
+                      <p className="mt-1 text-[10px] text-black/45">45 minute consultation</p>
                     </div>
 
                     <span className="shrink-0 rounded-full bg-brand-yellow-soft px-3 py-1.5 text-[11px] font-bold">
@@ -322,9 +299,7 @@ export function AstrologerDemoModal({
                       ←
                     </button>
 
-                    <p className="text-[12px] font-bold">
-                      September 2026
-                    </p>
+                    <p className="text-[12px] font-bold">September 2026</p>
 
                     <button
                       type="button"
@@ -337,16 +312,14 @@ export function AstrologerDemoModal({
 
                   {/* Week days */}
                   <div className="mt-5 grid grid-cols-7 text-center">
-                    {["M", "T", "W", "T", "F", "S", "S"].map(
-                      (day, index) => (
-                        <span
-                          key={`${day}-${index}`}
-                          className="text-[9px] font-semibold text-black/35"
-                        >
-                          {day}
-                        </span>
-                      ),
-                    )}
+                    {["M", "T", "W", "T", "F", "S", "S"].map((day, index) => (
+                      <span
+                        key={`${day}-${index}`}
+                        className="text-[9px] font-semibold text-black/35"
+                      >
+                        {day}
+                      </span>
+                    ))}
                   </div>
 
                   {/* Calendar dates */}
@@ -415,31 +388,21 @@ export function AstrologerDemoModal({
                 ---------------------------------------------- */}
                 <div className="mt-5">
                   <div className="flex items-center justify-between">
-                    <p className="text-[12px] font-bold">
-                      Available Time
-                    </p>
+                    <p className="text-[12px] font-bold">Available Time</p>
 
-                    <span className="text-[9px] text-black/40">
-                      18 Sep
-                    </span>
+                    <span className="text-[9px] text-black/40">18 Sep</span>
                   </div>
 
                   <div className="mt-3 grid grid-cols-2 gap-2">
-                    {[
-                      "10:00 AM",
-                      "11:30 AM",
-                      "2:00 PM",
-                      "4:30 PM",
-                      "6:00 PM",
-                      "7:30 PM",
-                    ].map((time) => {
-                      const selected = time === "4:30 PM";
+                    {["10:00 AM", "11:30 AM", "2:00 PM", "4:30 PM", "6:00 PM", "7:30 PM"].map(
+                      (time) => {
+                        const selected = time === "4:30 PM";
 
-                      return (
-                        <button
-                          key={time}
-                          type="button"
-                          className={`
+                        return (
+                          <button
+                            key={time}
+                            type="button"
+                            className={`
                             rounded-[14px]
                             border
                             py-3
@@ -452,11 +415,12 @@ export function AstrologerDemoModal({
                                 : "border-black/10 bg-white hover:border-black/30"
                             }
                           `}
-                        >
-                          {time}
-                        </button>
-                      );
-                    })}
+                          >
+                            {time}
+                          </button>
+                        );
+                      },
+                    )}
                   </div>
                 </div>
 
@@ -466,23 +430,15 @@ export function AstrologerDemoModal({
                 <div className="mt-5 rounded-[18px] border border-black/10 bg-white/70 p-4">
                   <div className="flex items-center justify-between gap-3">
                     <div>
-                      <p className="text-[9px] text-black/40">
-                        Your Appointment
-                      </p>
+                      <p className="text-[9px] text-black/40">Your Appointment</p>
 
-                      <p className="mt-1 text-[12px] font-bold">
-                        18 September • 4:30 PM
-                      </p>
+                      <p className="mt-1 text-[12px] font-bold">18 September • 4:30 PM</p>
                     </div>
 
                     <div className="text-right">
-                      <p className="text-[9px] text-black/40">
-                        Total
-                      </p>
+                      <p className="text-[9px] text-black/40">Total</p>
 
-                      <p className="mt-1 text-[13px] font-bold">
-                        ₹999
-                      </p>
+                      <p className="mt-1 text-[13px] font-bold">₹999</p>
                     </div>
                   </div>
                 </div>
@@ -499,8 +455,7 @@ export function AstrologerDemoModal({
                 </button>
 
                 <p className="mt-3 text-center text-[9px] text-black/40">
-                  Select your preferred date & time and confirm your
-                  consultation.
+                  Select your preferred date & time and confirm your consultation.
                 </p>
               </div>
             </section>
@@ -522,17 +477,11 @@ export function AstrologerDemoModal({
                 FOOTER
             ================================================== */}
             <footer className="mt-12 border-t border-black/10 pt-6 text-center">
-              <p className="text-[12px] font-semibold">
-                ✦ Cosmic Guidance
-              </p>
+              <p className="text-[12px] font-semibold">✦ Cosmic Guidance</p>
 
-              <p className="mt-2 text-[10px] text-black/40">
-                Astrology • Tarot • Numerology
-              </p>
+              <p className="mt-2 text-[10px] text-black/40">Astrology • Tarot • Numerology</p>
 
-              <p className="mt-4 text-[9px] text-black/30">
-                © 2026 Cosmic Guidance
-              </p>
+              <p className="mt-4 text-[9px] text-black/30">© 2026 Cosmic Guidance</p>
             </footer>
           </main>
         </div>
@@ -545,22 +494,12 @@ export function AstrologerDemoModal({
    STAT COMPONENT
 ============================================================= */
 
-function Stat({
-  value,
-  label,
-}: {
-  value: string;
-  label: string;
-}) {
+function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-2xl border border-black/10 bg-white px-2 py-4 text-center">
-      <p className="text-[18px] font-bold">
-        {value}
-      </p>
+      <p className="text-[18px] font-bold">{value}</p>
 
-      <p className="mt-1 text-[9px] leading-3 text-black/45">
-        {label}
-      </p>
+      <p className="mt-1 text-[9px] leading-3 text-black/45">{label}</p>
     </div>
   );
 }
@@ -569,16 +508,8 @@ function Stat({
    SECTION TITLE
 ============================================================= */
 
-function SectionTitle({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <h3 className="text-[20px] font-bold">
-      {children}
-    </h3>
-  );
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return <h3 className="text-[20px] font-bold">{children}</h3>;
 }
 
 /* =============================================================
@@ -600,13 +531,9 @@ function ServiceCard({
     <div className="rounded-[20px] border border-black/10 bg-white p-4">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h4 className="text-[14px] font-bold">
-            {title}
-          </h4>
+          <h4 className="text-[14px] font-bold">{title}</h4>
 
-          <p className="mt-2 text-[11px] leading-5 text-black/55">
-            {description}
-          </p>
+          <p className="mt-2 text-[11px] leading-5 text-black/55">{description}</p>
         </div>
 
         <span className="shrink-0 rounded-full bg-brand-yellow-soft px-3 py-1 text-[10px] font-bold">
@@ -614,9 +541,7 @@ function ServiceCard({
         </span>
       </div>
 
-      <div className="mt-3 text-[10px] text-black/45">
-        ⏱ {duration}
-      </div>
+      <div className="mt-3 text-[10px] text-black/45">⏱ {duration}</div>
     </div>
   );
 }
@@ -625,20 +550,14 @@ function ServiceCard({
    BENEFIT
 ============================================================= */
 
-function Benefit({
-  text,
-}: {
-  text: string;
-}) {
+function Benefit({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-3 rounded-2xl bg-black/[0.035] px-4 py-3">
       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-pink-soft text-[12px]">
         ✦
       </span>
 
-      <span className="text-[12px] font-medium">
-        {text}
-      </span>
+      <span className="text-[12px] font-medium">{text}</span>
     </div>
   );
 }
